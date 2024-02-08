@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E9CB04842B7506B700DAE23A /* geometryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04832B7506B700DAE23A /* geometryApp.swift */; };
-		E9CB04862B7506B700DAE23A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04852B7506B700DAE23A /* ContentView.swift */; };
+		E9CB04862B7506B700DAE23A /* FiguresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04852B7506B700DAE23A /* FiguresView.swift */; };
 		E9CB04882B7506B800DAE23A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CB04872B7506B800DAE23A /* Assets.xcassets */; };
 		E9CB048B2B7506B800DAE23A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CB048A2B7506B800DAE23A /* Preview Assets.xcassets */; };
 		E9CB04952B7506B800DAE23A /* geometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04942B7506B800DAE23A /* geometryTests.swift */; };
 		E9CB049F2B7506B800DAE23A /* geometryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB049E2B7506B800DAE23A /* geometryUITests.swift */; };
 		E9CB04A12B7506B800DAE23A /* geometryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04A02B7506B800DAE23A /* geometryUITestsLaunchTests.swift */; };
+		E9CB04B02B750E4B00DAE23A /* Figures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04AF2B750E4B00DAE23A /* Figures.swift */; };
+		E9CB04B32B750FA300DAE23A /* FiguresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB04B22B750FA300DAE23A /* FiguresViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		E9CB04802B7506B700DAE23A /* geometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CB04832B7506B700DAE23A /* geometryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometryApp.swift; sourceTree = "<group>"; };
-		E9CB04852B7506B700DAE23A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9CB04852B7506B700DAE23A /* FiguresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresView.swift; sourceTree = "<group>"; };
 		E9CB04872B7506B800DAE23A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CB048A2B7506B800DAE23A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9CB04902B7506B800DAE23A /* geometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		E9CB049A2B7506B800DAE23A /* geometryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geometryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CB049E2B7506B800DAE23A /* geometryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometryUITests.swift; sourceTree = "<group>"; };
 		E9CB04A02B7506B800DAE23A /* geometryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9CB04AF2B750E4B00DAE23A /* Figures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures.swift; sourceTree = "<group>"; };
+		E9CB04B22B750FA300DAE23A /* FiguresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,9 @@
 		E9CB04822B7506B700DAE23A /* geometry */ = {
 			isa = PBXGroup;
 			children = (
-				E9CB04832B7506B700DAE23A /* geometryApp.swift */,
-				E9CB04852B7506B700DAE23A /* ContentView.swift */,
-				E9CB04872B7506B800DAE23A /* Assets.xcassets */,
+				E9CB04B82B752E3D00DAE23A /* Application */,
+				E9CB04B72B752E2B00DAE23A /* Common */,
+				E9CB04AD2B750E0D00DAE23A /* Module */,
 				E9CB04892B7506B800DAE23A /* Preview Content */,
 			);
 			path = geometry;
@@ -125,6 +129,56 @@
 				E9CB04A02B7506B800DAE23A /* geometryUITestsLaunchTests.swift */,
 			);
 			path = geometryUITests;
+			sourceTree = "<group>";
+		};
+		E9CB04AD2B750E0D00DAE23A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04B42B75153C00DAE23A /* Model */,
+				E9CB04B12B750E7200DAE23A /* View */,
+				E9CB04AE2B750E1300DAE23A /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E9CB04AE2B750E1300DAE23A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04B22B750FA300DAE23A /* FiguresViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9CB04B12B750E7200DAE23A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04852B7506B700DAE23A /* FiguresView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9CB04B42B75153C00DAE23A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04AF2B750E4B00DAE23A /* Figures.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9CB04B72B752E2B00DAE23A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04872B7506B800DAE23A /* Assets.xcassets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E9CB04B82B752E3D00DAE23A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB04832B7506B700DAE23A /* geometryApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CB04862B7506B700DAE23A /* ContentView.swift in Sources */,
+				E9CB04862B7506B700DAE23A /* FiguresView.swift in Sources */,
 				E9CB04842B7506B700DAE23A /* geometryApp.swift in Sources */,
+				E9CB04B32B750FA300DAE23A /* FiguresViewModel.swift in Sources */,
+				E9CB04B02B750E4B00DAE23A /* Figures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
